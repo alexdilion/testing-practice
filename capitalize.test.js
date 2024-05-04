@@ -2,7 +2,7 @@
 
 import capitalize from "./capitalize";
 
-test("Regular strings", () => {
+test("All lowercase", () => {
     const tests = [
         ["hello", "Hello"],
         ["apples and oranges", "Apples and oranges"],
@@ -12,4 +12,16 @@ test("Regular strings", () => {
     tests.forEach((test) => {
         expect(capitalize(test[0])).toMatch(test[1]);
     });
+});
+
+test("All uppercase", () => {
+    expect(capitalize("AAAA")).toMatch("AAAA");
+});
+
+test("Single character", () => {
+    expect(capitalize("a")).toMatch("A");
+});
+
+test("Empty string", () => {
+    expect(capitalize("")).toMatch("");
 });
