@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import capitalize from "./capitalize";
+import capitalize from "../src/capitalize";
 
 test("All lowercase", () => {
     const tests = [
