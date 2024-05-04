@@ -30,3 +30,33 @@ test("Subtraction", () => {
         expect(calc.subtract(...test[0])).toEqual(test[1]);
     });
 });
+
+test("Multiplication", () => {
+    const tests = [
+        [[3, 2], 6],
+        [[10, 10], 100],
+        [[10, 0], 0],
+        [[-1, 1], -1],
+        [[-1, -1], 1],
+    ];
+    const calc = new calculator();
+
+    tests.forEach((test) => {
+        expect(calc.multiply(...test[0])).toEqual(test[1]);
+    });
+});
+
+test("Division", () => {
+    const tests = [
+        [[1, 1], 1],
+        [[50, 10], 5],
+        [[200, 0.5], 400],
+        [[-5, -5], 1],
+        [[100, -10], -10],
+    ];
+    const calc = new calculator();
+
+    tests.forEach((test) => {
+        expect(calc.divide(...test[0])).toEqual(test[1]);
+    });
+});

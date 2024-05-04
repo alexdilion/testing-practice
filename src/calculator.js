@@ -8,4 +8,12 @@ export default class calculator {
     subtract(a, b) {
         return a - b;
     }
+
+    multiply(a, b) {
+        return a * b;
+    }
+
+    divide(a, b) {
+        return a / b;
+    }
 }
