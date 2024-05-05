@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 
 function getShiftedChar(char, shiftFactor) {
-    const key = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const key = " .,?!0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
     if (key.indexOf(char) === -1) return char;
 
     const shiftIndex = key.indexOf(char) + shiftFactor;
-    return key[shiftIndex];
+    return key[shiftIndex % key.length];
 }
 
 export default function caesarCipher(message, shiftFactor) {
