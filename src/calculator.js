@@ -28,7 +28,6 @@ export default class calculator {
 
     divide(a, b) {
         this.#checkArguments(a, b);
-
         if (b === 0) throw new Error("D'oh! Division by zero!");
 
         return a / b;
